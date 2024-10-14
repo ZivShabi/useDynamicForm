@@ -1,20 +1,94 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 2em auto;
+  gap: 40px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 2em;
+}
+
+.react {
+  filter: hue-rotate(200deg);
+}
+
+
+.formFields {
+  width: 80vw;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(80px, auto);
+  gap: 20px;
+  padding: 8em;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .formFields {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5em;
+  }
+}
+
+@media (max-width: 576px) {
+  .formFields {
+    grid-template-columns: 1fr;
+    padding: 3em;
+  }
+}
+
 input {
   display: block;
+  width: 100%;
+  padding: 10px;
   margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 p {
   color: red;
   font-size: 0.9em;
+  font-weight: bold;
 }
 
 span {
   color: green;
+  margin: 0.5em;
 }
 
-.formFields {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(80px, auto);
-  gap: 20px;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -3em;
+}
+
+form>.submit {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  background-color: #006ee4;
+  color: rgb(231, 227, 227);
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: -4em;
+}
+
+form>.submit:hover {
+  background-color: #002f62;
 }
